@@ -1,4 +1,4 @@
-// PARTE 1 DO EXERCICIOS 4.4: Objetos e For/in
+// PARTE I DO EXERCICIOS 4.4: Objetos e For/in
 
 let info = {
     charecter: 'Margarida',
