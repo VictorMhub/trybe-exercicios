@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+@media screen and (max-width: 500px) {
+    body{
+        background-color: red; 
+        font-size: large;
+    }
+    
+    h1{
+        text-align: center;
+    }
+
+    .header-container{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 1;
+        align-content: center;
+        margin-right: 10px;
+    }
+
+
+    h2 {
+        text-align: center;
+    }
+
+    .main-content{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content p {
+        width: 90%;
+        font-size:x-large
+        
+    }
+
+    .aside-one, .aside-two{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .aside-one li, .aside-two li {
+        padding: 5px
+    }
+}
+    
+@media screen and (min-width:768px){ 
+    body{
+        background-color: blue; 
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px){
+    body{
+        background-color: yellow;
+    }
+}
