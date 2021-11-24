@@ -63,8 +63,7 @@ const books = [
   
   // Adicione o código do exercício aqui:
 //Não consegui desenvolver
-  const  reduceNames = books.reduce((acc,book)=>{
+  const  reduceNames = books.reduce((acc,book)=> acc += book.author.name)
     
-},)
 
 console.log(reduceNames);

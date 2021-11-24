@@ -9,5 +9,6 @@ const arrays = [
     return acc
   },[]);
   
+  // const flatten = arrays.reduce(([acc,array]) => ([acc,array]))
   console.log(flatten);
   // Adicione o código do exercício aqui:
