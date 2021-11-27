@@ -62,8 +62,7 @@ const books = [
   ];
 
   const expectedResult = () => {
-    const currentYear = 2021;
-    return books.filter((book)=> book.releaseYear < currentYear - 60).map(book => book.name);
+    return books.filter((book)=> book.releaseYear < 2021 - 60).map(book => book.name);
   };
 
   console.log(expectedResult())

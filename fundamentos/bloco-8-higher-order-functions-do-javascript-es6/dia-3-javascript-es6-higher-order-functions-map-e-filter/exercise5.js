@@ -60,11 +60,17 @@ const books = [
       releaseYear: 1928,
     },
   ];
-//NÃO DEU MUITO CERTO NAO KKKKKKKKKKK
-  const expectedResult = books.map((book)=> {
-    const wantedGenres = ['Fantasia', 'Ficção Científica'];
-    return  books.filter((book)=>  wantedGenres.includes(book.genre))
-   
-  }).sort()
+  const expectedResult = [
+    'Frank Herbert',
+    'George R. R. Martin',
+    'Isaac Asimov',
+    'J. R. R. Tolkien',
+  ];
+  
+  function fantasyOrScienceFictionAuthors() {
+    const newArray = books.filter(books => books.genre === 'Ficção Científica' || books.genre === 'Fantasia');
+    return  newArray.map((authors) =>  `${authors.name}`)
+  };
 
+  fantasyOrScienceFictionAuthors()
   console.log(expectedResult)
