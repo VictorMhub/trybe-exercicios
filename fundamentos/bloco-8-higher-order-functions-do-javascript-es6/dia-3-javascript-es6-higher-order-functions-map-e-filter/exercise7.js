@@ -60,5 +60,13 @@ const books = [
       releaseYear: 1928,
     },
   ];
-// não consegui fazer kkk sou burro (?)
-  const expectedResult = books.filter((book)=> book.name.startsWith(''))
+
+  const expectedResult = 'O Senhor dos Anéis';
+
+  function authorWith3DotsOnName() {
+    return books.find((book) => (
+      book.author.name.split(' ').filter((word) => word.endsWith('.')).length === 3
+    )).name;
+  }
+
+  console.log(authorWith3DotsOnName());
