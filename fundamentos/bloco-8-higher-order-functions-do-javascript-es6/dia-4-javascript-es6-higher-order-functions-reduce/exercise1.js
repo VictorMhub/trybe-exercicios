@@ -1,14 +1,11 @@
 const arrays = [
-    ['1', '2', '3'],
-    [true],
-    [4, 5, 6],
-  ];
-  
-  const  flatten = arrays.reduce((acc,array)=> {
-    acc.push(array)
-    return acc
-  },[]);
-  
-  // const flatten = arrays.reduce(([acc,array]) => ([acc,array]))
-  console.log(flatten);
-  // Adicione o código do exercício aqui:
+  ['1', '2', '3'],
+  [true],
+  [4, 5, 6],
+];
+
+function flatten() {
+    return arrays.reduce((acc,curr) => acc.concat(curr));
+};
+
+console.log(flatten());
