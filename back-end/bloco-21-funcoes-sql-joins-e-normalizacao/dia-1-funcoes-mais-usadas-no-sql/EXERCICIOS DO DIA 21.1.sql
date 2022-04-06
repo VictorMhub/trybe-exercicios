@@ -1,0 +1,46 @@
+SELECT max(MAX_SALARY) FROM hr.jobs;	#EXERCICIO 1
+
+SELECT max(MAX_SALARY) - max(MIN_SALARY) FROM hr.jobs;		#EXERCICIO 2
+
+SELECT AVG(MIN_SALARY) FROM hr.jobs ORDER BY JOB_ID;		#EXERCICIO 3
+
+SELECT SUM(SALARY) FROM hr.employees;		#EXERCICIO 4 
+
+SELECT MAX(SALARY),
+			MIN(SALARY),
+			SUM(SALARY),
+            ROUND(AVG(SALARY), 2)
+FROM hr.employees;		#EXERCICIO 5
+
+SELECT JOB_ID, COUNT(*) AS 'Total'
+FROM hr.employees
+WHERE JOB_ID = 'IT_PROG'; 	#EXERCICIO 6
+
+SELECT JOB_ID, SUM(SALARY) AS 'Total'
+FROM hr.employees
+GROUP BY JOB_ID;		#EXERCICIO 7
+
+SELECT JOB_ID, SUM(SALARY) AS 'Total'
+FROM hr.employees
+GROUP BY JOB_ID
+HAVING JOB_ID = 'IT_PROG';		#EXERCICIOS 8
+
+SELECT AVG(SALARY), JOB_ID
+FROM hr.employees
+WHERE JOB_ID <> 'IT_PROG'
+GROUP BY JOB_ID
+ORDER BY SALARY DESC;		#EXERCICIO 9
+
+SELECT AVG(SALARY), 
+COUNT(EMPLOYEE_ID)
+FROM hr.employees
+GROUP BY DEPARTMENT_ID
+HAVING NUMBER_OF_EMPLOYEES > 10;  #EXERCICIO 10
+
+SELECT department_id,
+    AVG(salary) 'average_salary' ,
+    COUNT(*) 'number_of_employees'
+FROM hr.employees
+GROUP BY department_id
+HAVING `number_of_employees` > 10;
+
